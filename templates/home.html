@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+	Megalo Home
+{% endblock title %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col mx-auto text-center">
+		<div class="card mx-auto m-5 card-body bg-dark" style="width: 70%;">
+			<h3>Capitulos</h3>
+
+			<table class="table table-secondary mx-auto">
+	<tbody>
+		{% for i in object_list %}
+			<tr>
+				<td>
+					<a class="cap-sel" href="{{ i.slug }}"><h5>{{ i.titulo }}</h5></a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+		</div>
+	</div>
+</div>
+{% endblock content %}

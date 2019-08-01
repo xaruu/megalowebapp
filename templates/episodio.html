@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+	<div class="col mx-auto">
+			<br>
+		<div class="jumbotron pt-3 rounded-0 bg-dark">
+		<h2 class="text-center lead">{{ object.titulo }} </h2>
+
+		<div id="marco" class="card  rounded-0 p-2 m-1 card-body">
+			<div id="video" class="video border-white text-center mx-auto">Cargando...</div>
+		</div>
+		<div class=" mx-auto text-center w-100"><a class="btn btn-lg btn-dark">Anterior</a><a class="btn btn-lg btn-secondary">Lista de Capitulos</a><a class="btn btn-lg btn-secondary">Siguiente</a></div>
+		<p class="text-center">{{ object.descripcion }}</p>
+		<hr>
+
+<script src="https://cdn.jwplayer.com/libraries/TsbDrRmv.js"></script>
+<script>
+
+
+	
+	jwplayer("video").setup({
+		playlist: [{
+			sources: [{
+				label: "360p",
+				type: "video/mp4",
+				file: "{{link}}=m18",
+			},{
+				label: "720p",
+				type: "video/mp4",
+				file: "{{link}}=m22",
+			}]
+		}],
+	});
+
+
+
+</script>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

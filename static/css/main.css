@@ -1,0 +1,21 @@
+.container	{
+	width: 75%;
+}
+
+body{
+	background: url("https://k50.kn3.net/5/3/F/9/6/3/B4E.jpg") no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+a{
+	color: white;
+}
+
+#marco{
+	background: #111;
+}
+
+.cap-sel:hover{
+	background: purple !important;
+}
